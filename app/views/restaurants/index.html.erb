@@ -1,0 +1,11 @@
+<div class="card mt-5">
+  <div class="card-header">
+    Restaurants
+  </div>
+  <ul class="list-group list-group-flush">
+    <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %> | <%= restaurant.category %> | <%= restaurant.address %></li>
+    <% end %>
+  </ul>
+</div>
+
